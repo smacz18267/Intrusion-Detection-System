@@ -82,7 +82,7 @@ python3 app.py
 ```
 The server will start at http://127.0.0.1:5001.
 
-#### Frontend Setup
+### **2. Frontend Setup**
 
 1. Navigate to the Frontend Directory
 
@@ -99,26 +99,25 @@ Then, open http://localhost:5001 in your browser.
  
 ## 🎯 API Endpoints
 
-### **POST /predict**
-- Description: Predicts the next stock price for a given ticker.
-- Request Body:
+### **GET /**
+- Description: Loads the Intrusion Detection Dashboard.
+  
+#### WebSocket Connection
+
+- Description: Listens for real-time alerts from the backend.
+- Event: new_alert
+- Payload Example:
 
 ```bash
 {
-  "ticker": "AAPL"
+  "timestamp": "2025-03-02 00:33:01",
+  "anomaly_score": 0.75,
+  "prediction": 1,
+  "details": "Potential intrusion detected."
 }
 ```
-- Response:
-```bash
-{
-  "ticker": "AAPL",
-  "predicted_price": 123.45,
-  "timestamp": "2025-02-24T09:54:10.081924"
-}
-```
-Test the API at http://127.0.0.1:8000/docs.  
 
-## 📌 Model Architecture
+## 📌 Detection Mechanism
 
 This model processes historical stock data using:
 - Conv1D Layers: Extracts local features from the stock price time series.
