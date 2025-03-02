@@ -82,47 +82,20 @@ python3 app.py
 ```
 The server will start at http://127.0.0.1:5001.
 
-#### Set Up PostgreSQL Database
+#### Frontend Setup
 
-1. Make sure you have PostgreSQL installed.
-2. Create a new database:
-```bash
-CREATE DATABASE stock_db;
-```
-3. Grant privileges to your PostgreSQL user:
-```bash
-GRANT ALL PRIVILEGES ON DATABASE stock_db TO your_username;
-```
-#### Configure .env File
+1. Navigate to the Frontend Directory
 
-Create a .env file inside the backend folder:
-
-```bash
-DATABASE_URL=postgresql://your_username:your_password@localhost:5432/stock_db
-```
-Replace your_username and your_password with your actual PostgreSQL credentials.
-
-#### Run the FastAPI Server
-```bash
-uvicorn app:app --reload
-```
-
-The server will start at http://127.0.0.1:8000, and API documentation will be available at http://127.0.0.1:8000/docs.
-
-### **3. Frontend Setup**
-
-#### Navigate to the Frontend Directory
 ```bash
 cd frontend
 ```
 
-#### Open the Frontend in Your Browser
-You can open the index.html file directly or serve it using a local server:
+2. Open the Frontend in Your Browser
+You can open the dashboard.html file directly or serve it using a local server:
 ```bash
-python -m http.server 8080
+python -m http.server 5001
 ```
-
-Then, open http://localhost:8080 in your browser.
+Then, open http://localhost:5001 in your browser.
  
 ## 🎯 API Endpoints
 
