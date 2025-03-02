@@ -82,7 +82,7 @@ python3 app.py
 ```
 The server will start at http://127.0.0.1:5001.
 
-### **2. Frontend Setup**
+### **3. Frontend Setup**
 
 1. Navigate to the Frontend Directory
 
@@ -119,15 +119,14 @@ Then, open http://localhost:5001 in your browser.
 
 ## 📌 Detection Mechanism
 
-This model processes historical stock data using:
-- Conv1D Layers: Extracts local features from the stock price time series.
-- Bidirectional LSTM Layers: Captures long-term dependencies in stock movements.
-- Custom Attention Mechanism: Helps focus on relevant historical patterns.
-- Dense Layers: Produces the final predicted stock price.
+This system processes network data using:
+- LSTM/Transformer Models: Learn patterns in network traffic.
+- Autoencoder for Anomaly Detection: Identifies unusual activity.
+- Real-time Analysis with Flask-SocketIO: Streams alerts instantly.
 
 ## 🔥 Future Improvements
 
-- ✅ Data Enrichment: Incorporate real-world news sentiment, macroeconomic indicators, or alternative datasets.
-- ✅ Advanced Model Architectures: Experiment with transformer-based models or ensemble methods.
-- ✅ Hyperparameter Tuning: Implement systematic tuning with tools like Keras Tuner.
-- ✅ Backtesting & Risk Management: Develop frameworks to validate the model’s effectiveness in real-world trading.
+- ✅ Improve Model Accuracy: Fine-tune hyperparameters for better detection.
+- ✅ Deploy on Cloud: Host the system on AWS/GCP.
+- ✅ Enhance Visualization: Build a dashboard with graphs.
+- ✅ Multi-User Support: Allow multiple admins to monitor alerts.
