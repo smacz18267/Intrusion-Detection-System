@@ -27,23 +27,28 @@ This IDS is designed to analyze network traffic and system logs to detect:
 The backend is implemented in Flask and Flask-SocketIO, providing real-time alerts to the frontend, which is built using JavaScript and WebSockets. Deep learning models are used for intelligent threat analysis.
 ## 📁 Project Structure
 ```
-stock-prediction-model
-├── backend/
-│   ├── .env                  # Environment variables (e.g., DATABASE_URL)
-│   ├── app.py                # Main FastAPI application
-│   ├── requirements.txt      # Python dependencies for the backend
-│   ├── database/
-│   │   ├── db.py             # PostgreSQL connection setup (SQLAlchemy)
-│   │   └── models.py         # ORM model for storing predictions
-│   ├── models/
-│   │   ├── supervised_model.py   # Supervised learning model (CNN+LSTM+Attention)
-│   │   └── attention_layer.py    # Custom attention layer for the model
-│   ├── utils/
-│   │   └── data_processing.py    # Data download, feature engineering, and scaling functions
-└── frontend/
-    ├── index.html            # Simple HTML interface for the stock prediction app
-    ├── app.js                # JavaScript to call the backend API
-    ├── style.css             # Basic styling for the frontend
+
+cyber_ids/                # Root project directory
+│── backend/              # Backend (Flask, AI model, WebSockets)
+│   ├── app.py            # Main Flask server with WebSockets
+│   ├── train.py          # Training script for AI model
+│   ├── models.py         # Defines AI model (LSTM/Transformer)
+│   ├── config.py         # Configuration file (hyperparams, paths)
+│   ├── intrusion_model.pth  # Trained PyTorch model file
+│   ├── requirements.txt  # Dependencies (Flask, PyTorch, SocketIO)
+│
+│── frontend/             # Frontend (HTML, CSS, JS)
+│   ├── templates/        # HTML templates for Flask
+│   │   ├── dashboard.html  # Main UI for alerts
+│   │
+│   ├── static/           # Static assets (CSS, JS, images)
+│   │   ├── css/
+│   │   │   ├── styles.css  # Dashboard styling
+│   │   │
+│   │   ├── js/
+│   │   │   ├── main.js     # Handles WebSockets, updates alerts
+│   │   │
+│── requirements.txt
 ```
 
 ## Setup and Installation
