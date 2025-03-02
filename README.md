@@ -35,7 +35,6 @@ cyber_ids/                # Root project directory
 │   ├── models.py         # Defines AI model (LSTM/Transformer)
 │   ├── config.py         # Configuration file (hyperparams, paths)
 │   ├── intrusion_model.pth  # Trained PyTorch model file
-│   ├── requirements.txt  # Dependencies (Flask, PyTorch, SocketIO)
 │
 │── frontend/             # Frontend (HTML, CSS, JS)
 │   ├── templates/        # HTML templates for Flask
@@ -48,7 +47,7 @@ cyber_ids/                # Root project directory
 │   │   ├── js/
 │   │   │   ├── main.js     # Handles WebSockets, updates alerts
 │   │   │
-│── requirements.txt
+│── requirements.txt       # Dependencies (Flask, PyTorch, SocketIO)
 ```
 
 ## Setup and Installation
