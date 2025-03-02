@@ -1,8 +1,8 @@
 # Intrusion-Detection-System
 
-This repository contains an advanced stock prediction system that uses a deep-learning model to predict stock prices based on historical data and technical indicators. The project is organized into separate backend and frontend folders.
+This repository contains a real-time Intrusion Detection System (IDS) that monitors network traffic and system events to identify potential security threats. It utilizes Flask and Flask-SocketIO for real-time alerting, and deep learning models for advanced anomaly detection.
 
-**Disclaimer:** This project is a research and educational prototype. Stock prediction is inherently uncertain, and this model should not be used for real-world trading without extensive testing, validation, and risk management.
+**Disclaimer:** This project is for research and educational purposes. It is not intended for production use without thorough validation, security auditing, and proper deployment measures.
 
 ## Table of Contents
 
@@ -12,19 +12,19 @@ This repository contains an advanced stock prediction system that uses a deep-le
   - Backend Setup
   - Frontend Setup
 - 🎯API Endpoints
-- 📌 Model Architecture 
+- 📌 Detection Mechanism
 - 🔥 Future Improvements
 
 ## Overview
 
-This project implements a supervised learning model using a hybrid architecture that combines:
-- Convolutional layers (Conv1D) for local feature extraction,
-- Bidirectional LSTM layers for capturing temporal dependencies,
-- A custom attention mechanism to weigh important time steps,
-- Fully connected layers to produce a final stock price prediction.
+This IDS is designed to analyze network traffic and system logs to detect:
 
-Predictions are stored in a PostgreSQL database using SQLAlchemy, and the model is exposed via a FastAPI backend. A simple HTML/CSS/JavaScript frontend is provided to interact with the API.
+- Port scans and suspicious network activity.
+- Unusual authentication attempts.
+- Anomalous system behaviors based on deep learning models.
+- Signature-based and heuristic threat detection.
 
+The backend is implemented in Flask and Flask-SocketIO, providing real-time alerts to the frontend, which is built using JavaScript and WebSockets. Deep learning models are used for intelligent threat analysis.
 ## 📁 Project Structure
 ```
 stock-prediction-model
