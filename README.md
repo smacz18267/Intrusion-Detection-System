@@ -55,8 +55,8 @@ cyber_ids/                # Root project directory
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/stock-prediction-model.git
-cd stock-prediction-model
+git clone https://github.com/your-username/intrusion-detection-system.git
+cd intrusion-detection-system
 ```
 
 ### **2. Backend Setup**
@@ -74,6 +74,13 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 cd backend
 pip install -r requirements.txt
 ```
+
+#### Run the Flask Server
+
+```bash
+python3 app.py
+```
+The server will start at http://127.0.0.1:5001.
 
 #### Set Up PostgreSQL Database
 
