@@ -4,7 +4,7 @@ import os
 class Config:
     # Flask settings
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'super_secret_key'
-
+    
     # Deep Learning Model Parameters
     MODEL_TYPE = 'Transformer'
     INPUT_DIM = 20
